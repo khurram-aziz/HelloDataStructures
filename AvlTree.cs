@@ -108,11 +108,11 @@ namespace DataStructures
         public override BinaryTreeNode<T> Add(T data)
         {
             Debug.Write(string.Format("Adding {0}, ", data));
-            var parent = base.Add(data);
-            this.balance(parent);
+            var newNode = base.Add(data);
+            this.balance(newNode.Parent);
 
             Debug.WriteLine("");
-            return parent;
+            return newNode;
         }
         
         public T[] BreadthFirst()

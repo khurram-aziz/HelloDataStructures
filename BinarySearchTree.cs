@@ -38,7 +38,7 @@ namespace DataStructures
                     parent.Right = newNode;
             }
 
-            return parent;
+            return newNode;
         }
 
         public override bool Contains(T data)
